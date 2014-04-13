@@ -22,14 +22,14 @@ This cookbook depends on the following cookbooks:
 
 ### Play installation
 
-|Key            |Type    |Description                |Default|
-|---------------|--------|---------------------------|-------|
-|`version`      |`String`|The Play version to install.|`2.2.2`|
-|`base_url`     |`String`|The base url for downloading Play.|`http://downloads.typesafe.com/play`|
-|`download_url` |`String`|The fully formed url for downloading Play. This is contructed by concatenating the `version` with the `base_url`. **Note** that if this attribute is overriden then the `base_url` becomes defunct and is ignored.|`{base_url}/{version}/play-{version}.zip`|
-|`download_path`|`String`|The download path          |`/tmp` |
-|`install_path` |`String`|The installation path      |`/opt` | 
-|`install_dir`  |`String`|The name of Play's installation directory|`play-2.2.2`| 
+|Key              |Type    |Description                 |Default|
+|-----------------|--------|----------------------------|-------|
+|`version`        |`String`|The Play version to install.|`2.2.2`|
+|`base_url`       |`String`|The base url for downloading Play.|`http://downloads.typesafe.com/play`|
+|`download_url`   |`String`|The fully formed url for downloading Play. This is contructed by concatenating the `version` with the `base_url`. **Note** that if this attribute is overriden then the `base_url` becomes defunct and is ignored.|`{base_url}/{version}/play-{version}.zip`|
+|`download_prefix`|`String`|The download path           |`/tmp` |
+|`install_prefix` |`String`|The installation path       |`/opt` | 
+|`home`           |`String`|The name of Play's home directory|`play-2.2.2`| 
 
 
 <br/>
@@ -41,9 +41,9 @@ This cookbook depends on the following cookbooks:
     "version": "2.2.2",
     "base_url": "http://downloads.typesafe.com/play",
     "download_url": "http://downloads.typesafe.com/play/2.2.2/play-2.2.2.zip",
-    "download_path": "/tmp",
-    "install_path": "/opt",
-    "install_dir": "play-2.2.2"
+    "download_prefix": "/tmp",
+    "install_prefix": "/opt",
+    "home": "play-2.2.2"
   }
 }
 ```
